@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createvar(){
+            var variable = document.getElementById('variable').value;
+            var value = document.getElementById('value').value;
+            this[variable] = value;
+            
+            document.getElementById('demo1').innerHTML = variable;
+            document.getElementById('demo2').innerHTML = this[variable];
+        }
+    </script>
+
+<label for="variable">Enter variable : </label>
+<input type="text" id="variable"/>
+<br><br>
+<label for="value">Enter value : </label>
+<input type="text" id="value"/>
+<br><br>
+<input type="button" value="Create" onclick="createvar()">
+<BR><BR>
+<span id="demo1"></span>
+<span id="demo2"></span>
+</body>
+
+</html>

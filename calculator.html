@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+</head>
+
+
+<body>
+    <script>
+        
+        
+    function mul(){
+        var x = document.getElementById("first").value;
+        var y = document.getElementById("second").value;
+        document.getElementById('demo').innerHTML = x*y;
+        //alert(x*y);
+        
+    }
+    function div(){
+        var x = document.getElementById("first").value;
+        var y = document.getElementById("second").value;
+        document.getElementById("demo").innerHTML = x/y;
+        //alert(x/y);
+    }
+</script>
+    
+    
+        <label for="first"><b>First Number :</b> </label>
+        <input type="text" id="first"  >
+        <br><br>
+        <label for="second"><b>Second Number :</b> </label>
+        <input type="text" id="second"  >
+        <br><br>
+        <input type="button" id="mul" onClick="mul()" value="Multiply">
+        <input type="button" id="div" onClick="div()" value="Divide">
+        <br>
+        <p>The Result is :</p>
+        <p id="demo"> </p> 
+    
+    
+</body>
+</html>
