@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<body>
+    <form>
+        <label for="name" id="namelabel">Name : </label>
+        <input type="textbox" id="name" class="name">
+        
+        <!-- <label for="age" id="agelabel">&nbsp; &nbsp; Age :</label>
+        <input type="number" id="age" class="age"> -->
+        <br><br>
+
+        <label for="pwrd" id="pwrdlabel">Password : </label>
+        <input type="password" id="pwrd" class="pwrd">
+
+        <br><br>
+        <label for="repwrd" id="repwrdlabel">Re-enter Password : </label>
+        <input type="password" id="repwrd" class="pwrd">
+
+        <br><br>
+        <input type="submit" id="submit" value="Submit" onclick="validate()">
+    </form>
+    <script>
+        function validate(){
+            var pwrd = document.getElementById('pwrd').value;
+            var repwrd = document.getElementById('repwrd').value;
+            var age = document.getElementById('age').value;
+            if(pwrd !== repwrd)
+                alert("Password Mismatch");
+            
+        }
+    </script>
+</body>
+</html>

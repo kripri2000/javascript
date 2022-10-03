@@ -1,0 +1,28 @@
+<!-- Access DOM using innerHTML-->
+
+<html>
+    <head>
+        <title>DOM Example</title>
+        
+    </head>
+    <body>
+        <h2 style="color:red;" id="heading">Heading</h2>
+        <p id="demo"></p>
+        <button type="button" id="button">Click me</button>
+        <script>
+            //Changing content
+            document.getElementById('demo').innerHTML = "hello world";
+            //Changing style ppty
+            document.getElementById('heading').style.color = 'blue';
+            //Changing attribute value
+
+           // document.getElementById('heading').setAttribute(id,'newheading');
+            document.getElementById('heading').id = 'newheading';
+            document.getElementById('newheading').innerHTML += '  New Heading';
+            //Event handling
+            document.getElementById('button').onclick = function(){document.write('Welcome')};
+
+
+        </script>
+    </body>
+</html>
