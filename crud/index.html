@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+       Employee Management 
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Poppins:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body style="background-image:url(https://wallpapercave.com/wp/wp7728108.jpg);background-size:cover;background-position: right top;">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    	<!-- <h1><center><font color="steelblue"><b>UST Employee Zone</b></font></center></h1> -->
+
+    <ul>
+        <li class="ust"><a href="#">UST Employee Zone</a></li>
+        <li><a onclick="onDelete()" id="dltbtn"><i class='material-icons' style='color:white;'>delete</i></a></li>
+        <li><a onclick="onEdit()"><i class='material-icons' style='color:white;' id='editbtn'>edit</i></a></li>
+
+        
+      </ul>
+	<!-- <hr> -->
+			<div class="employee-form">
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Full Name<font color="red">*</font></label><label class="validation-error hide" id="fullNameValidationError"><i>This field is required.</i></label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label>Email Id</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div>
+                        <label>Salary</label>
+                        <input type="text" name="salary" id="salary">
+                    </div>
+                    <div>
+                        <label>City</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+                    
+                    <div  class="form-action-buttons">
+                        <center><input type="submit" value="Submit" ></center>
+                    </div>                                       
+                    
+                </form>
+		</div>
+		<br/>
+		<div class = "employees-table">
+                <table class="list" id="employeeList" >
+                    <thead>
+                        <tr style="background-color:lightsalmon">
+                            <th>Select</th>
+                            <th>Full Name</th>
+                            <th>Email Id</th>
+                            <th>Salary</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+        </div>
+    
+    <script src="script.js"></script>
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+    
+</body>
+</html>

@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM CSS</title>
+    <title>DOM Event Listener</title>
 </head>
-<body>
-    <p id="demo" style="color:blue;">Blue to Red</p>
+<body>  
+    <button type="button" id='btn'>Click me!</button>
     <script>
-        document.getElementById('demo').style.color = "red";
+        document.getElementById('btn').addEventListener('click',function(){alert("Thank you for clicking!")})
     </script>
-    
 </body>
-
 </html>
